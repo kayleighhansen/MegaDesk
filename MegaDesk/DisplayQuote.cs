@@ -12,9 +12,18 @@ namespace MegaDesk
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        public DisplayQuote(object _mainMenu1, object _mainMenu)
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var mainMenuForm = new MainMenu();
+            mainMenuForm.Tag = this;
+            mainMenuForm.Show();
+
+            this.Hide();
         }
     }
 }

@@ -25,5 +25,28 @@ namespace MegaDesk
 
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var viewAllQuotesForm = new ViewAllQuotes();
+            viewAllQuotesForm.Tag = this;
+            viewAllQuotesForm.Show();
+
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var searchQuotesForm = new SearchQuotes();
+            searchQuotesForm.Tag = this;
+            searchQuotesForm.Show();
+
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
